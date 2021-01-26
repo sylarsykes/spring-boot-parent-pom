@@ -30,6 +30,22 @@
 			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
 		</license>
 	</licenses>
+	<scm>
+        <url>${github.repository.url}</url>
+        <connection>${github.connection}</connection>
+        <developerConnection>${github.connection}</developerConnection>
+    </scm>
+    
+    <distributionManagement>
+        <repository>
+            <id>thenewmotion</id>
+            <url>http://nexus.thenewmotion.com/content/repositories/releases-public</url>
+        </repository>
+        <snapshotRepository>
+            <id>thenewmotion</id>
+            <url>http://nexus.thenewmotion.com/content/repositories/snapshots-public</url>
+        </snapshotRepository>
+    </distributionManagement>
   	
   	<properties>
 		<!-- Common -->
@@ -39,6 +55,12 @@
 		<developer.email>juan.gonzalez.fernandez.jgf@outlook.com</developer.email>
 		<developer.git.user.url>https://github.com/sylarsykes</developer.git.user.url>
 		<developer.git.project.url>https://github.com/sylarsykes/spring-boot-parent-pom</developer.git.project.url>
+		
+		<!-- Git -->
+		<github.user>sylarsykes</github.user>
+		<github.repository>${project.artifactId}</github.repository>
+		<github.repository.url>http://github.com/${github.user}/${github.repository}</github.repository.url>
+        <github.connection>scm:git:ssh://git@github.com/${github.user}/${github.repository}</github.connection>
 		
 		<spring-boot.version>2.4.2</spring-boot.version>
 		
